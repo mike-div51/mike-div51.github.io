@@ -35,6 +35,7 @@ body {
 
 ol, ul {
 	list-style: none;
+	padding: 0pt 100pt;
 }
 
 blockquote, q {
@@ -174,10 +175,14 @@ input, select, textarea {
 			color: #d64760;
 		}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h3, h4, h5 {
 		font-weight: 400;
 		color: #fff;
 		letter-spacing: -0.05em;
+	}
+
+	h6 {
+		font-size: 20pt;
 	}
 
 	strong, b {
@@ -368,7 +373,7 @@ input, select, textarea {
 			flex-shrink: 0;
 			margin: 5px;
 			height: 16em;
-			box-shadow: 0 0 0 10px #ffffff;
+			box-shadow: 0 0 0 10px #000000;
 		}
 
 			#main .item.span-1 {
