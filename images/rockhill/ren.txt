@@ -1,0 +1,5 @@
+%x=0
+for %i in (*.jpg) do (
+	%x=%x+1
+	ren %i.jpg %x.jpg
+)
