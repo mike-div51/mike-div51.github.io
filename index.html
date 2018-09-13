@@ -1,3 +1,32 @@
+
+<?PHP
+  // form handler
+  if($_POST && isset($_POST['sendfeedback'], $_POST['name'], $_POST['email'], $_POST['subject'], $_POST['message'])) {
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    if(!$name) {
+      $errorMsg = "Please enter your Name";
+    } elseif(!$email || !preg_match("/^\S+@\S+$/", $email)) {
+      $errorMsg = "Please enter a valid Email address";
+    } elseif(!$message) {
+      $errorMsg = "Please enter your comment in the Message box";
+    } else {
+      // send email and redirect
+      $to = "mike@div51.com";
+      if(!$subject) $subject = "Contact from website";
+      $headers = "From: webmaster@example.com" . "\r\n";
+      mail($to, $subject, $message, $headers);
+      header("Location: http://www.example.com/thankyou.html");
+      exit;
+    }
+
+  }
+?>
+
 <!DOCTYPE HTML>
 <!--
 	Forty by HTML5 UP
@@ -144,7 +173,7 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="post" action="mailto:mike@div51.com" enctype="text/plain">
+								<form method="post" action="email.php" enctype="text/plain">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
