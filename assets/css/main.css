@@ -3576,7 +3576,8 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #282816;
+		background-image: url("../../images/bg.jpg");
+	/*	background-color: #282816; */
 	}
 
 		#main > * {
