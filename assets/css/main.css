@@ -2816,7 +2816,7 @@ input, select, textarea {
 			}
 
 			.tiles article:nth-child(6n - 4):before {
-				background-color: #8d82c4;
+				background-color: #87c5a4;
 			}
 
 			.tiles article:nth-child(6n - 3):before {
@@ -2832,7 +2832,7 @@ input, select, textarea {
 			}
 
 			.tiles article:nth-child(6n):before {
-				background-color: #87c5a4;
+				background-color: #8d82c4;
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -3266,7 +3266,7 @@ input, select, textarea {
 		body.is-preload #header.alt {
 			opacity: 0;
 		}
-
+		
 		@media screen and (max-width: 1680px) {
 
 			#header nav a[href="#menu"] {
