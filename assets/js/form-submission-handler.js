@@ -70,7 +70,7 @@
     }
     */
 
-    if( data.email && !validEmail(data.email) ) {   // if email is not valid show error
+    if( !validEmail(data.email) ) {   // if email is not valid show error
       var invalidEmail = form.querySelector(".email-invalid");
       if (invalidEmail) {
         invalidEmail.style.display = "block";
@@ -101,6 +101,7 @@
           return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
       }).join('&');
       xhr.send(encoded);
+      form.reset();
     }
   }
   
